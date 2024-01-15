@@ -1,8 +1,6 @@
 'use client'
 import {Image, Card, CardHeader, CardFooter,CardBody, Divider, Link} from "@nextui-org/react";
-import Book from './book'
-import ProfileCell  from "./ProfileCell";
-const People = () => {
+const research = () => {
     return (
         <main className="w-full min-h-screen dark:bg-gray-900 bg-background flex flex-col items-center justify-center">
            
@@ -69,7 +67,7 @@ const People = () => {
           <div className="grid grid-flow-row-dense sm:grid-cols-3 grid-rows-3 py-10 gap-14">
           {
           [1,2,3,4,5,6,7,8,9,10,11,12].map((item, index) => (
-            <ProfileCell key={index} /> 
+            <h1 className="e"></h1>
             ))
           }
           
@@ -78,7 +76,7 @@ const People = () => {
            <div className=" grid grid-flow-row-dense sm:grid-cols-3 grid-rows-3 py-10 gap-8">
                 {
                     [1,2,3,4,5,6,7,8,9,10,11,12].map((item, index) => (
-                        <Book key={index}/>
+                        <h1 className="e"></h1>
                     ))
                 }
             </div>
@@ -88,4 +86,4 @@ const People = () => {
     )
 }
 
-export default People
+export default research
