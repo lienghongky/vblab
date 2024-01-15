@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities{
+  .open{
+    transform: rotateY(-135deg)
+  };
+  .pitch{
+    transform: rotateX(-80deg);
+  }; 
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -25,3 +33,25 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+
+.cover{
+  transform: rotateY(-135deg);
+}
+.detail{
+  width: 100%;
+  height: 100%;
+  background: white !important;
+  box-shadow:  inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid lightgray ;
+}
+.bookWrapper:hover{
+  transform: perspective(2000px) rotate(-10deg);
+}
+
+.bookWrapper:hover .cover{
+  
+}
+
