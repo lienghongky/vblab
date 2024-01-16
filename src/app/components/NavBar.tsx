@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Image, NavbarMenu, NavbarMenuToggle, NavbarMenuItem} from "@nextui-org/react";
-import {SunIcon} from "./Icons";
+import {FacebookIcon, SunIcon} from "./Icons";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 export default function NavBar() {
@@ -54,7 +54,9 @@ export default function NavBar() {
             <Link href="#">Login</Link>
           </NavbarItem> */}
           <NavbarItem>
-          <Link href="#">Facebook</Link>
+          <Link href="#">
+            <FacebookIcon/>
+          </Link>
           </NavbarItem>
           <NavbarItem>
             <ThemeSwitcher />
