@@ -3,7 +3,9 @@ import {Image, Card, CardHeader, CardFooter,CardBody, Divider, Link} from "@next
 const research = () => {
     return (
         <main className="w-full min-h-screen dark:bg-gray-900 bg-background flex flex-col items-center justify-center">
-           
+          <div className="h-72 w-full bg-gradient-to-r from-red-500 via-green-500 to-blue-500 flex items-center justify-center">
+                <h1 className="text-4xl font-bold"> Researches</h1>
+            </div> 
            <div className=" flex py-36 items-center justify-center">
             <div className="w-1/2 flex justify-center">
               <div className="flex flex-col items-center justify-center">

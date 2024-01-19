@@ -6,27 +6,27 @@ const People = () => {
     return (
         <main className="w-full min-h-screen dark:bg-gray-900 bg-background flex flex-col items-center justify-center">
            
-           <div className=" flex py-36 items-center justify-center">
+           <div className=" flex py-36 items-center justify-center ">
             <div className="w-1/2 flex justify-center">
-              <div className="flex flex-col items-center justify-center">
-              <div className="w-2 h-2 rounded-full bg-white mx-1"></div>
-                      <div className="w-1/4 h-1  bg-white mt-1 "></div>
-                      <div className="w-2/4 h-1 bg-white mt-1"></div>
-                      <div className="w-3/4 h-1 bg-white mt-1 mb-1 "></div>
+              <div className="flex flex-col items-center justify-center transition duration-1000  hover:-translate-y-4">
+              <div className="w-2 h-2 rounded-full bg-gray-600 dark:bg-white mx-1"></div>
+                      <div className="w-1/4 h-1  bg-gray-600 dark:bg-white mt-1 "></div>
+                      <div className="w-2/4 h-1 bg-gray-600 dark:bg-white mt-1"></div>
+                      <div className="w-3/4 h-1 bg-gray-600 dark:bg-white mt-1 mb-1 "></div>
                 <Image
-                        className="h-64 overflow-clip object-cover border-4 border-white"
+                        className=" h-64 overflow-clip object-cover border-4 border-gray-600 dark:border-white"
                         radius="none"
                         shadow='none'
                         src="https://ai.pusan.ac.kr/sites/ai/atchmnfl/pnuProfl/2087/temp_1622167215445100.jpg"
                         alt="NextUI Album Cover"
                         />
-                        <div className="w-3/4 h-1 bg-white mt-1"></div>
-                      <div className="w-2/4 h-1 bg-white mt-1"></div>
-                      <div className="w-1/4 h-1 bg-white mt-1"></div>
+                        <div className="w-3/4 h-1 bg-gray-600 dark:bg-white mt-1"></div>
+                      <div className="w-2/4 h-1 bg-gray-600 dark:bg-white mt-1"></div>
+                      <div className="w-1/4 h-1 bg-gray-600 dark:bg-white mt-1"></div>
                       <div className="flex justify-center mt-1">
-                      <div className="w-2 h-2 rounded-full bg-white mx-1"></div>
-                      <div className="w-2 h-2 rounded-full bg-white mx-1"></div>
-                      <div className="w-2 h-2 rounded-full bg-white mx-1 "></div>
+                      <div className="w-2 h-2 rounded-full bg-gray-600 dark:bg-white mx-1"></div>
+                      <div className="w-2 h-2 rounded-full bg-gray-600 dark:bg-white mx-1"></div>
+                      <div className="w-2 h-2 rounded-full bg-gray-600 dark:bg-white mx-1 "></div>
                       </div>
               </div>
             </div>

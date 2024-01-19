@@ -8,6 +8,14 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
+  safelist: [
+    'text-2xl',
+    'text-3xl',
+    {
+      pattern: /bg-(teal|blue|indigo|purple|pink|red|orange|yellow|green|gray)-(400|500|600)/,
+      variants: ['lg', 'hover', 'focus', 'lg:hover'],
+    },
+  ],
   theme: {
     extend: {
       backgroundImage: {

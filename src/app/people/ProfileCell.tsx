@@ -3,7 +3,7 @@ import { Image, Divider, LinkIcon } from '@nextui-org/react';
 import { TwitterIcon,EmailIcon, FacebookIcon, GithubIcon } from '../components/Icons';
 const ProfileCell = () => {
     return (
-        <div className="relative">
+        <div className="group relative">
             <div className="z-0 absolute left-0 right-8 top-0 bottom-0 bg-blue-100 ">
                 <div className="text-black flex flex-col divide-y p-4">
                     <div className="px-2">
@@ -28,7 +28,7 @@ const ProfileCell = () => {
                     </div> 
                 </div>
             </div>
-            <div className="group duration-500   bg-white  w-52  overflow-clip flex flex-row shadow-xl">
+            <div className=" duration-500   bg-white  w-52  overflow-clip flex flex-row shadow-xl">
           
             <div className="z-10 bg-white transition duration-1000 shadow-sm group-hover:-translate-x-52 flex flex-col items-center justify-center ">
                 <div className="w-full  flex justify-center items-center py-2">
