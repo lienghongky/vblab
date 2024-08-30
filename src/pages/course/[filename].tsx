@@ -1,5 +1,51 @@
+import '@/app/globals.css'
 import { Image, Card, CardHeader, CardFooter, Button } from "@nextui-org/react"
-export const Course = () => {
+import { useTina } from 'tinacms/dist/react'
+import { TinaMarkdown } from 'tinacms/dist/rich-text'
+import client from '../../../tina/__generated__/client'
+
+
+export const getStaticProps = async ({ params }) => {
+  let data = {}
+  let query = {}
+  let variables = { relativePath: `${params.filename}.md` }
+  try {
+    const res = await client.queries.course(variables)
+    query = res.query
+    data = res.data
+    variables = res.variables
+  } catch {
+    // swallow errors related to document creation
+  }
+
+  return {
+    props: {
+      variables: variables,
+      data: data,
+      query: query,
+      //myOtherProp: 'some-other-data',
+    },
+  }
+}
+
+export const getStaticPaths = async () => {
+  const coursesListData = await client.queries.courseConnection()
+
+  return {
+    paths: coursesListData.data.courseConnection.edges.map((course) => ({
+      params: { filename: course.node._sys.filename },
+    })),
+    fallback: false,
+  }
+}
+
+export const Course = (props) => {
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  })
+
     const colors = ["teal", "red","blue", "indigo", "purple", "pink", "orange", "yellow", "green", "gray"]
     const courses = [
         {
@@ -124,6 +170,9 @@ export const Course = () => {
     ]
     return (
         <main className="w-full min-h-screen dark:bg-gray-700 bg-background flex flex-col items-center justify-center">
+          <pre>
+            {JSON.stringify(data, null, 2)}
+          </pre>
 <div 
 style={{backgroundImage: 'url("https://t3.ftcdn.net/jpg/01/05/85/14/360_F_105851441_gDJSXUgfH54DwX5rfH6Qiq4sHIZ9ogYL.jpg")'}}
 className="h-72 w-full bg-gradient-to-r from-red-500 via-green-500 to-blue-500 flex items-center justify-center"
@@ -135,7 +184,7 @@ className="h-72 w-full bg-gradient-to-r from-red-500 via-green-500 to-blue-500 f
  <div className="flex items-center justify-center space-x-4">
     {
         newCourses.map((item, index) => (
-            <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5 shadow-2xl">
+            <Card key={index} isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5 shadow-2xl">
                 <CardHeader className="absolute z-10 top-1 flex-col items-start">
                     <p className="text-tiny text-red-400 uppercase font-bold">New</p>
                     <h4 className="text-white font-medium text-lg drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">{item.name}</h4>
