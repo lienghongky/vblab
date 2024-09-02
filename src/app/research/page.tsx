@@ -1,91 +1,90 @@
-'use client'
-import {Image, Card, CardHeader, CardFooter,CardBody, Divider, Link} from "@nextui-org/react";
-const research = () => {
-    return (
-        <main className="w-full min-h-screen dark:bg-gray-900 bg-background flex flex-col items-center justify-center">
-          <div className="h-72 w-full bg-gradient-to-r from-red-500 via-green-500 to-blue-500 flex items-center justify-center">
-                <h1 className="text-4xl font-bold"> Researches</h1>
-            </div> 
-           <div className=" flex py-36 items-center justify-center">
-            <div className="w-1/2 flex justify-center">
-              <div className="flex flex-col items-center justify-center">
-              <div className="w-2 h-2 rounded-full bg-white mx-1"></div>
-                      <div className="w-1/4 h-1  bg-white mt-1 "></div>
-                      <div className="w-2/4 h-1 bg-white mt-1"></div>
-                      <div className="w-3/4 h-1 bg-white mt-1 mb-1 "></div>
-                <Image
-                        className="h-64 overflow-clip object-cover border-4 border-white"
-                        radius="none"
-                        shadow='none'
-                        src="https://ai.pusan.ac.kr/sites/ai/atchmnfl/pnuProfl/2087/temp_1622167215445100.jpg"
-                        alt="NextUI Album Cover"
-                        />
-                        <div className="w-3/4 h-1 bg-white mt-1"></div>
-                      <div className="w-2/4 h-1 bg-white mt-1"></div>
-                      <div className="w-1/4 h-1 bg-white mt-1"></div>
-                      <div className="flex justify-center mt-1">
-                      <div className="w-2 h-2 rounded-full bg-white mx-1"></div>
-                      <div className="w-2 h-2 rounded-full bg-white mx-1"></div>
-                      <div className="w-2 h-2 rounded-full bg-white mx-1 "></div>
-                      </div>
-              </div>
-            </div>
-            <div className=" w-36"></div>
-            <div className="w-1/2 flex flex-col items-center justify-start dark:text-white text-gray-950">
-             <h1 className="font-bold text-3xl">DoHoon Lee, Ph.D</h1>
-            <p className="whitespace-nowrap">Department of Computer Science and Engineering</p>
-            <div className="pt-10 text-sm dark:text-white text-gray-950">
+
+import SearchBar from "./SearchBar";
+import Feature from "../components/Feature";
+
+const research = (props) => {
+
+  const features = [{
+    title: "Image enhancement",
+    image: "https://img.freepik.com/free-vector/online-photography-courses-isometric-concept_52683-33743.jpg?t=st=1725264775~exp=1725268375~hmac=b11f514fd968a377cda2feb8a4ca55800a94f85e8ba69a738dae548a216b2a82&w=1480",
+    description: "Image enhancement is the process of adjusting digital images so that the results are mstep in the workflow of digital image processing.",
+  },
+  {
+    title: "Reidentification",
+    image: "https://img.freepik.com/free-vector/laptop-with-personal-data-being-watched-isometric-concept-white_1284-64136.jpg?t=st=1725264996~exp=1725268596~hmac=8b1c26b4bf51b61f5bef6421a2a8cfe1ad719a4f66b3ae16e0d60f8674d6044d&w=1480",
+    description: "Image enhancement is the process of adjusting digital images so that the results are more suitable for display or further image ge processing.",
+  },
+  {
+    title: "Generative AI",
+    image: "https://img.freepik.com/free-vector/realistic-3d-shapes-floating-background_52683-60310.jpg?t=st=1725265037~exp=1725268637~hmac=f1448d7121493cd72e9fd2e4ec51e3e440c460c30e9eece3c9beee7408d677b8&w=1480",
+    description: "Image enhancement is the process of adjusting digital images so that the results are more suitable for display or further image analysis. This process ise processing.",
+  },
+  {
+    title: "Segmentation/Detection", 
+    image: "https://img.freepik.com/premium-vector/vector-bitcoin-creation-process-search-bitcoin-flat-isometric-alternative-crypto-currency_716020-10.jpg?w=1800",
+    description: "Image enhancement is the process of adjusting digital images so that the ",
+  }
+]
+
+const catgeories = [
+  {
+    title: "Image enhancement",
+    image: "https://img.freepik.com/free-vector/online-photography-courses-isometric-concept_52683-33743.jpg?t=st=1725264775~exp=1725268375~hmac=b11f514fd968a377cda2feb8a4ca55800a94f85e8ba69a738dae548a216b2a82&w=1480",
+    description: "Image enhancement is the process of adjusting digital images so that the results are mstep in the workflow of digital image processing.",
+  },
+  {
+    title: "Reidentification",
+    image: "https://img.freepik.com/free-vector/laptop-with-personal-data-being-watched-isometric-concept-white_1284-64136.jpg?t=st=1725264996~exp=1725268596~hmac=8b1c26b4bf51b61f5bef6421a2a8cfe1ad719a4f66b3ae16e0d60f8674d6044d&w=1480",
+    description: "Image enhancement is the process of adjusting digital images so that the results are more suitable for display or further image ge processing.",
+  },
+  {
+    title: "Generative AI",
+    image: "https://img.freepik.com/free-vector/realistic-3d-shapes-floating-background_52683-60310.jpg?t=st=1725265037~exp=1725268637~hmac=f1448d7121493cd72e9fd2e4ec51e3e440c460c30e9eece3c9beee7408d677b8&w=1480",
+    description: "Image enhancement is the process of adjusting digital images so that the results are more suitable for display or further image analysis. This process ise processing.",
+  },
+  {
+    title: "Segmentation/Detection", 
+    image: "https://img.freepik.com/premium-vector/vector-bitcoin-creation-process-search-bitcoin-flat-isometric-alternative-crypto-currency_716020-10.jpg?w=1800",
+    description: "Image enhancement is the process of adjusting digital images so that the ",
+  }
+]
+  return (
+    <div className="w-full p-10  bg-white dark:bg-gray-900">
       
-              <table>
-                <tbody>
-                  <tr>
-                    <td>TEL</td>
-                    <td className="font-bold px-4 text-left">(051) 510-2491</td>
-                  </tr>
-                  <tr>
-                    <td>FAX</td>
-                    <td className="font-bold px-4 text-left">(051) 515-2208</td>
-                  </tr>
-                  <tr>
-                    <td>EMAIL</td>
-                    <td className="font-bold px-4 text-left">dohoon@pnu.edu</td>
-                  </tr>
-                  <tr>
-                    <td>HOMEPAGE</td>
-                    <td className="font-bold px-4 text-left"><a href="http://visbic.cse.pusan.ac.kr/~dhlee/">http://visbic.cse.pusan.ac.kr/~dhlee/</a></td>
-                  </tr>
-                  <tr>
-                    <td>LOCATION</td>
-                    <td className="font-bold px-4 text-left">313-312(Research Lab Bldg #313)</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            </div>
-           </div>
-           <div className="">
+      <div className="flex flex-col justify-center py-20">
+      <SearchBar data={{ filter: catgeories }} />
+      </div>
+      <section>
+      <h2 className="drop-shadow-lg text-black dark:text-white">
+    ONGOING RESEARCHS:
+    </h2>
+    <hr /> 
 
-           <h1 className="w-full text-center font-bold text-3xl">Current members</h1>
-          <div className="grid grid-flow-row-dense sm:grid-cols-3 grid-rows-3 py-10 gap-14">
-          {
-          [1,2,3,4,5,6,7,8,9,10,11,12].map((item, index) => (
-            <h1 className="e"></h1>
-            ))
-          }
-          
+    <div className="w-full flex flex-wrap items-center justify-center py-20">
+      {
+        Array.from({ length: 4 }, () => features).flat().map((item, index) => (
+          <div className="p-2 transform transition duration-100 hover:scale-105">
+            <Feature key={index} className="w-64 from-pink-600"  data={item}></Feature>
           </div>
-           <h1 className="w-full text-center font-bold text-3xl mt-32">Alumini</h1>
-           <div className=" grid grid-flow-row-dense sm:grid-cols-3 grid-rows-3 py-10 gap-8">
-                {
-                    [1,2,3,4,5,6,7,8,9,10,11,12].map((item, index) => (
-                        <h1 className="e"></h1>
-                    ))
-                }
-            </div>
-           </div>
-        </main>
-        
-    )
-}
+        ))
+      }
+    </div>
+      </section>
+      <section className="w-full">
+    <h2 className="drop-shadow-lg text-black dark:text-white">
+    RESEARCHS:
+    </h2>
+    <hr />
+    <div className="w-full flex items-center justify-center space-x-4 py-20">
+      {
+        features.map((item, index) => (
+          <Feature key={index} className="w-64"  data={item}></Feature>
+        ))
+      }
+    </div>
+    </section>
+    </div>
+  );
+};
 
-export default research
+export default research;

@@ -170,9 +170,6 @@ export const Course = (props) => {
     ]
     return (
         <main className="w-full min-h-screen dark:bg-gray-700 bg-background flex flex-col items-center justify-center">
-          <pre>
-            {JSON.stringify(data, null, 2)}
-          </pre>
 <div 
 style={{backgroundImage: 'url("https://t3.ftcdn.net/jpg/01/05/85/14/360_F_105851441_gDJSXUgfH54DwX5rfH6Qiq4sHIZ9ogYL.jpg")'}}
 className="h-72 w-full bg-gradient-to-r from-red-500 via-green-500 to-blue-500 flex items-center justify-center"

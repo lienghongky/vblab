@@ -18,6 +18,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        main: ['var(--font-audiowide)', 'monospace'],
+      },
+      borderWidth: {
+        10: '10px',
+        20: '20px',
+      },
+      boxShadow:{
+        'inner-xl': 'inset 2px 2px 10px 1px rgb(0 0 0 / 0.75)',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
