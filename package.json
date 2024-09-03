@@ -5,7 +5,7 @@
   "scripts": {
     "xdev": "next dev",
     "dev": "tinacms dev -c \"next dev\"",
-    "build": "TINA_PUBLIC_IS_LOCAL=true tinacms build && next build",
+    "build": "tinacms build && next build",
     "start": "tinacms build && next start",
     "lint": "next lint"
   },
