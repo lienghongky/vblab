@@ -1,7 +1,7 @@
 
 import SearchBar from "./SearchBar";
 import Feature from "../components/Feature";
-import client from '../../../tina/__generated__/client'
+import client from '../../../tina/__generated__/databaseClient'
 import Link from "next/link";
 
 const fetchAll = async () => {
