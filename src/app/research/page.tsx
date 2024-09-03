@@ -109,10 +109,10 @@ const catgeories = [
     </h2>
     <hr /> 
     <div className="w-full flex flex-wrap items-center justify-center py-20">
-      
+      <pre>{JSON.stringify(pinnedData)}</pre>
       {
 
-        pinnedData.researchConnection.edges.map((item, index) => (
+        pinnedData?.researchConnection && pinnedData.researchConnection.edges.map((item, index) => (
           <Link 
           href={`/research/${item.node._sys.filename}`}
           className="p-2 transform transition duration-100 hover:scale-105">
