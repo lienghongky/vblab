@@ -1,6 +1,6 @@
 import Feature from "@/app/components/Feature";
 import Link from "next/link";
-import client from "../../../../tina/__generated__/client";
+import client from "../../../../tina/__generated__/databaseClient";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 

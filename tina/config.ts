@@ -10,7 +10,7 @@ const branch = process.env.GITHUB_BRANCH ||
     process.env.HEAD ||
     "main";
 export default defineConfig({
-    contentApiUrlOverride: "/api/tina/gql",
+    contentApiUrlOverride: `/api/tina/gql`, // `${process.env.BASE_URL}/api/tina/gql`
     authProvider: isLocal ? new LocalAuthProvider() : new UsernamePasswordAuthJSProvider(),
     // branch,
     // // Get this from tina.io

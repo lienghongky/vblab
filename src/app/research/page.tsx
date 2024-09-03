@@ -109,7 +109,7 @@ const catgeories = [
     </h2>
     <hr /> 
     <div className="w-full flex flex-wrap items-center justify-center py-20">
-      <pre>{JSON.stringify(pinnedData)}</pre>
+     
       {
 
         pinnedData?.researchConnection && pinnedData.researchConnection.edges.map((item, index) => (
