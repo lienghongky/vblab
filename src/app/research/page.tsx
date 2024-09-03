@@ -141,7 +141,7 @@ const catgeories = [
       
       {
 
-        data.researchConnection.edges.map((pin, index) => (
+      data?.researchConnection && data.researchConnection.edges.map((pin, index) => (
           <Link 
           href={`/research/${pin.node._sys.filename}`}
           className="p-2 transform transition duration-100 hover:scale-105">
