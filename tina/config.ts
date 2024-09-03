@@ -1,6 +1,7 @@
 import { defineConfig } from "tinacms";
 import collectionPost from "./collections/post";
 import collectionCourse from "./collections/course";
+import collectionResearch from "./collections/research";
 // Your hosting provider likely exposes this as an environment variable
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -30,7 +31,8 @@ export default defineConfig({
   schema: {
     collections: [
       collectionPost,
-      collectionCourse
+      collectionCourse,
+      collectionResearch,
     ],
   },
 });

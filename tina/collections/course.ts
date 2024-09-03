@@ -4,6 +4,17 @@ export default {
     label: "Courses",
     path: "content/courses",
     fields: [
+      {
+        type:"boolean",
+        name:"visible",
+        label:"Visible",
+      },
+      {
+        type:"boolean",
+        name:"pinned",
+        label:"Pin",
+        description:"Pin to the top of the page only 2",
+      },
     {
         type:"string",
         name:"course_number",
@@ -16,6 +27,16 @@ export default {
         label: "Title",
         isTitle: true,
         required: true,
+      },
+      { 
+        type: "string",
+        name: "semester",
+        label: "Semester",
+      },
+      {
+        type: "string",
+        name: "author",
+        label: "Author",
       },
       {
         type: "string",

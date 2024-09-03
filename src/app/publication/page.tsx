@@ -13,9 +13,8 @@ const fetchAll = async () => {
         "eq": true
       },
       "type": {
-        "eq": "Research"
-      }
-      
+      "eq": "Dissertation"
+    }
     }
     }
   try {
@@ -49,7 +48,7 @@ const fetchPinned = async () => {
       "eq": true
     },
     "type": {
-      "eq": "Research"
+      "eq": "Dissertation"
     }
   }
   }
@@ -105,7 +104,7 @@ const catgeories = [
       </div>
       <section>
       <h2 className="drop-shadow-lg text-black dark:text-white">
-    ONGOING RESEARCHS:
+    DRAFT PAPER:
     </h2>
     <hr /> 
     <div className="w-full flex flex-wrap items-center justify-center py-20">
@@ -134,7 +133,7 @@ const catgeories = [
       </section>
       <section className="w-full">
     <h2 className="drop-shadow-lg text-black dark:text-white">
-    RESEARCHS:
+    PUBLISHED PAPER:
     </h2>
     <hr />
     <div className="w-full flex flex-wrap items-center justify-center py-20">

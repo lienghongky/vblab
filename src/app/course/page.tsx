@@ -161,7 +161,7 @@ export default function Course() {
      <div className="">
      <h3 className="drop-shadow-lg">We are committed to sharing our expertise through a series of courses and projects aimed at fostering deep understanding and practical skills:
      </h3>
-     <p className="font-mono text-xs py-10 text-black dark:text-black">
+     <p className="font-mono text-xs py-10 text-black dark:text-white">
       + Intelligence System (2023, 2024)<br/>
       + Computer Algorithms<br/>
       + Data Structures<br/>
@@ -175,7 +175,7 @@ export default function Course() {
 
       <section>
       <h2 className="drop-shadow-lg">
-    COMPLETED COURSES:<br/>
+    ALL COURSES:<br/>
     </h2>
     <hr />
 
