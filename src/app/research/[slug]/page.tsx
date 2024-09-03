@@ -37,23 +37,23 @@ const Page = async ({ params: { slug } }) => {
             <Feature
               className="w-64 shadow-2xl"
               data={{
-                title: data.research.title,
-                description: data.research.description,
-                image: data.research.thumbnail,
+                title: data?.research?.title ?? "",
+                description: data?.research?.description ?? "",
+                image: data?.research?.thumbnail ?? "",
               }}
             />
           </div>
           <div className="w-2/3">
             <div className="">
               <h3 data-tina-field={tinaField(data, 'fulltitle')} className="font-main font-bold text-sm drop-shadow-lg text-black dark:text-white">
-                {data.research.fulltitle}
+                {data?.research?.fulltitle ?? ""}
               </h3>
-              <p className="font-mono text-sm text-black dark:text-white">AUTHOR: {data.research.author}</p>
-              <p className="font-mono text-sm text-black dark:text-white">DATE: {data.research.date}</p>
+              <p className="font-mono text-sm text-black dark:text-white">AUTHOR: {data?.research?.author ?? ""}</p>
+              <p className="font-mono text-sm text-black dark:text-white">DATE: {data?.research?.date ?? ""}</p>
               <div className="flex justify-end">
                 {
                   
-                  data.research.pdf && data.research.pdf.map((f, index) => (
+                  data?.research?.pdf && data.research.pdf.map((f, index) => (
                     <Link
                     target="_blank"
                     className="font-mono text-sm font-bold text-blue-500"
@@ -67,7 +67,7 @@ const Page = async ({ params: { slug } }) => {
 
               <hr className="py-2" />
               <TinaMarkdown
-                content={data.research.fulldescription}
+                content={data?.research?.fulldescription ?? ""}
                 components={{
                   h1: (props) => (
                     <h1 className="drop-shadow-lg text-black dark:text-white">
@@ -85,7 +85,7 @@ const Page = async ({ params: { slug } }) => {
         </div>
 
         {
-          data.research.iframe.url && (
+          data?.research && data.research.iframe.url && (
             <div className="flex justify-center py-10">
           <div className="w-full h-[90dvh] bg-gray-800 rounded-xl overflow-clip shadow-2xl">
             <div className="w-full h-10 bg-gradient-to-b from-slate-400  to-slate-300 flex justify-between items-center px-2 shadow-lg">
