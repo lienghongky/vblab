@@ -1,8 +1,9 @@
 import { UsernamePasswordAuthJSProvider as UsernamePasswordAuthJSProvider, TinaUserCollection as TinaUserCollection } from "tinacms-authjs/dist/tinacms";
 import { defineConfig as defineConfig, LocalAuthProvider as LocalAuthProvider } from "tinacms";
-import collectionPost from "./collections/post";
+import collectionPage from "./collections/page";
 import collectionCourse from "./collections/course";
 import collectionResearch from "./collections/research";
+import collectionGlobal from "./collections/global";
 const isLocal = process.env.TINA_PUBLIC_IS_LOCAL === "true";
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.GITHUB_BRANCH ||
@@ -31,9 +32,10 @@ export default defineConfig({
     schema: {
         collections: [
             TinaUserCollection,
-            collectionPost,
+            collectionPage,
             collectionCourse,
-            collectionResearch
+            collectionResearch,
+            collectionGlobal,
         ]
     }
 });
