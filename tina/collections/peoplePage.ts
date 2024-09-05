@@ -18,9 +18,6 @@ export default {
             label: "Professor",
             list:true,
         },
-        {
-            
-        }
         
     ],
     ui: {
