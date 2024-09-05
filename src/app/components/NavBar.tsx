@@ -50,7 +50,7 @@ export default function App() {
       <div className="absolute left-8 top-32 right-1/3  h-40 rounded-2xl  p-2 ">
       <h1 
       // className="drop-shadow-xl text-white dark:text-black hero glitch layers" 
-      className=" drop-shadow-xl text-white dark:text-black stroke-1 stroke-slate-200 glitchx" 
+      className=" drop-shadow-xl text-white dark:text-black stroke-1 stroke-slate-200 glitchx floating-sm" 
       data-text="Visual computing & Biometrics LAB">
         <span>
         Visual computing & Biometrics LAB

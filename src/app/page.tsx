@@ -3,22 +3,22 @@ import Feature from "./components/Feature";
 export default function Home() {
   const features = [{
     title: "Image enhancement",
-    image: "https://cdn3d.iconscout.com/3d/premium/thumb/image-3d-icon-download-in-png-blend-fbx-gltf-file-formats--photo-picture-landscape-thumbnail-user-interface-pack-icons-4996992.png?f=webp",
+    image: "https://cdn3d.iconscout.com/3d/premium/thumb/text-to-image-ai-3d-icon-download-in-png-blend-fbx-gltf-file-formats--generator-program-internet-artificial-intelligence-pack-science-technology-icons-7232797.png?f=webp",
     description: "Image enhancement is the process of adjusting digital images so that the results are mstep in the workflow of digital image processing.",
   },
   {
     title: "Reidentification",
-    image: "https://cdn3d.iconscout.com/3d/premium/thumb/image-3d-icon-download-in-png-blend-fbx-gltf-file-formats--photo-picture-landscape-thumbnail-user-interface-pack-icons-4996992.png?f=webp",
+    image: "https://cdn3d.iconscout.com/3d/premium/thumb/face-recognition-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--metaverse-technology-scan-lock-unlock-security-pack-ar-illustrations-4222072.png?f=webp",
     description: "Image enhancement is the process of adjusting digital images so that the results are more suitable for display or further image ge processing.",
   },
   {
     title: "Generative AI",
-    image: "https://cdn3d.iconscout.com/3d/premium/thumb/image-3d-icon-download-in-png-blend-fbx-gltf-file-formats--photo-picture-landscape-thumbnail-user-interface-pack-icons-4996992.png?f=webp",
+    image: "https://cdn3d.iconscout.com/3d/premium/thumb/ai-image-generate-3d-icon-download-in-png-blend-fbx-gltf-file-formats--generator-text-prompt-artificial-intelligence-pack-machine-learning-icons-9316669.png?f=webp",
     description: "Image enhancement is the process of adjusting digital images so that the results are more suitable for display or further image analysis. This process ise processing.",
   },
   {
     title: "Segmentation/Detection", 
-    image: "https://cdn3d.iconscout.com/3d/premium/thumb/image-3d-icon-download-in-png-blend-fbx-gltf-file-formats--photo-picture-landscape-thumbnail-user-interface-pack-icons-4996992.png?f=webp",
+    image: "https://cdn3d.iconscout.com/3d/premium/thumb/image-recognition-12216179-9964607.png?f=webp",
     description: "Image enhancement is the process of adjusting digital images so that the ",
   }
 ]
@@ -62,7 +62,7 @@ return (
     <div className="flex items-center justify-center space-x-4 py-20">
       {
         features.map((item, index) => (
-          <Feature key={index} className="w-64"  data={item}></Feature>
+          <Feature key={index} className="w-64 from-pink-300 floating-lg"  data={item}></Feature>
         ))
       }
     </div>
@@ -76,7 +76,7 @@ return (
       <div className="w-1/2 flex justify-center items-center space-x-2">
       {
         COURSES.map((item, index) => (
-          <Feature key={index} className="w-64 bg-gradient-to-b from-teal-500 to-blue-500"  data={item}></Feature>
+          <Feature key={index} className="w-64 bg-gradient-to-b from-teal-500 to-blue-500 floating-lg duration-100"  data={item}></Feature>
         ))
       }
       </div>
@@ -106,7 +106,7 @@ return (
       <div className="grid grid-cols-2 gap-4">
       {
         PROJECT.map((item, index) => (
-          <Feature key={index} className="bg-gradient-to-b from-pink-500 to-blue-500"  data={item}></Feature>
+          <Feature key={index} className="bg-gradient-to-b from-pink-500 to-blue-500 floating-lg duration-75"  data={item}></Feature>
         ))
       }
       </div>

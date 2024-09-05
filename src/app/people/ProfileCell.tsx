@@ -1,9 +1,9 @@
 import React from 'react';
 import { Image, Divider, LinkIcon } from '@nextui-org/react';
 import { TwitterIcon,EmailIcon, FacebookIcon, GithubIcon } from '../components/Icons';
-const ProfileCell = () => {
+const ProfileCell = (props) => {
     return (
-        <div className="group relative">
+        <div className={`group relative ${props.className}`}>
             <div className="z-0 absolute left-0 right-8 top-0 bottom-0 bg-blue-100 ">
                 <div className="text-black flex flex-col divide-y p-4">
                     <div className="px-2">

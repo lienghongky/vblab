@@ -81,7 +81,7 @@ const People = () => {
               <div className="grid grid-flow-row-dense sm:grid-cols-3 grid-rows-3 py-10 gap-14">
               {
               [1,2,3,4,5,6,7,8,9,10,11,12].map((item, index) => (
-                <ProfileCell key={index} /> 
+                <ProfileCell className="" key={index} /> 
                 ))
               }
               

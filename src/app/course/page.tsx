@@ -153,7 +153,7 @@ export default function Course() {
       <div className="w-1/2 flex justify-center items-center space-x-2">
       {
         COURSES.map((item, index) => (
-          <Feature key={index} className="w-64 bg-gradient-to-b from-teal-500 to-blue-500"  data={item}></Feature>
+          <Feature key={index} className="floating-lg w-64 bg-gradient-to-b from-teal-500 to-blue-500"  data={item}></Feature>
         ))
       }
       </div>
@@ -189,7 +189,7 @@ export default function Course() {
                 <div className="w-full sm:w-1/2">
                 {
                     item.courses.map((course, index1) => (
-                        <div key={index1} className={`mt-4 transform transition cursor-pointer hover:-translate-y-2 group-even:mr-10 group-odd:ml-10 relative flex items-center  bg-${colors[(index+index1)%colors.length]}-600 text-white rounded-2xl flex-col md:flex-row space-y-4 md:space-y-0`}>
+                        <div key={index1} className={`floating-lg mt-4 transform transition cursor-pointer hover:-translate-y-2 group-even:mr-10 group-odd:ml-10 relative flex items-center  bg-${colors[(index+index1)%colors.length]}-600 text-white rounded-2xl flex-col md:flex-row space-y-4 md:space-y-0`}>
                     
 
                         <div className="w-5 h-5 bg-blue-600 absolute group-even:-right-10 group-odd:-left-10 transform rounded-full z-10 mt-2 md:mt-0 group-even:translate-x-3 group-odd:-translate-x-3"></div>
