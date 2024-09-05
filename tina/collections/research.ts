@@ -1,4 +1,4 @@
-
+import Upload from "./componets/Upload"
 export default {
     name: "research",
     label: "Research",
@@ -64,6 +64,9 @@ export default {
         type: "image",
         name: "thumbnail",
         label: "Thumbnail",
+        ui: {
+          parse: (media) => media.id,
+      },
       },
       {
         type: "rich-text",

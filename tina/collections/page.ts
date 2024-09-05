@@ -1,4 +1,3 @@
-import { list } from "postcss";
 
 export default {
     name: "page",
@@ -76,6 +75,9 @@ export default {
                                     type: "image",
                                     name: "icon",
                                     label: "Icon",
+                                    ui: {
+                                        parse: (media) => media.id,
+                                    },
                                 }
                     ],
                 },

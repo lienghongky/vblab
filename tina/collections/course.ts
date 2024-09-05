@@ -47,6 +47,9 @@ export default {
         type: "image",
         name: "thumbnail",
         label: "Thumbnail",
+        ui: {
+          parse: (media) => media.id,
+        },
       },
       {
         type: "string",

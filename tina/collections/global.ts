@@ -7,6 +7,14 @@ export default {
     path: "content/global",
     fields: [
         {
+            type: "image",
+            name: "favicon",
+            label: "Favicon",
+            ui: {
+                parse: (media) => media.id,
+            },
+        },
+        {
             type: "object",
             name: "Notification",
             label: "Notification",
@@ -78,6 +86,9 @@ export default {
                             type: "image",
                             name: "image",
                             label: "Image",
+                            ui: {
+                                parse: (media) => media.id,
+                            },
                         },
                         {
                             type: "string",
@@ -87,22 +98,13 @@ export default {
                     ],
                 },
                 {
-                    type: "object",
+                    type: "image",
                     name: "banners",
                     label: "Banners",
                     list: true,
-                    fields: [
-                        {
-                            type: "image",
-                            name: "image",
-                            label: "Image",
-                        },
-                        {
-                            type: "string",
-                            name: "alt",
-                            label: "Alt Text",
-                        },
-                    ],
+                    ui: {
+                        parse: (media) => media.id,
+                    },
                 },
                 {
                     type: "string",
@@ -306,6 +308,6 @@ export default {
     ui: {
         global: true,
       // This is an DEMO router. You can remove this to fit your site
-      router: ({ document }) => `/global/${document._sys.filename}`,
+      router: ({ document }) => `/`,
     },
   }
