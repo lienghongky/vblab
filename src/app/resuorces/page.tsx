@@ -107,9 +107,10 @@ const catgeories = [
 
       <section>
       <h2 className="drop-shadow-lg text-black dark:text-white">
-     RESOURCES REPORT:
+      CONFERENCES:
     </h2>
-    <div className="flex justify-center">
+    <hr className=""/>
+    <div className="flex justify-center py-10">
         <Table/>
     </div>
     </section>

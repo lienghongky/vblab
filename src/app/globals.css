@@ -5,10 +5,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @layer base {
   h1{
-    @apply font-main text-5xl font-bold text-black dark:text-white 
+    @apply font-main text-2xl sm:text-5xl font-bold text-black dark:text-white 
   }
   h2{
-    @apply font-main text-3xl text-black dark:text-white 
+    @apply font-main text-xl sm:text-3xl text-black dark:text-white 
   }
   h3 {
     @apply font-main text-sm font-bold text-black dark:text-white 
@@ -53,7 +53,6 @@ body {
 /* Glitch x */
 .glitchx {
   position: relative;
-  font-size: 60px;
   font-weight: bold;
   color: #ffffff;
   letter-spacing: 3px;

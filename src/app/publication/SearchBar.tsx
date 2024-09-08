@@ -31,7 +31,7 @@ const SearchBar = (props) => {
           </Button>
         </div>
       </div>
-      <ButtonGroup className="flex justify-center ">
+      <ButtonGroup className="hidden sm:flex justify-center ">
           {
             props.data.filter.map((item, index) => (
               <Button key={index}

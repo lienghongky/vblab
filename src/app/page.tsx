@@ -59,7 +59,7 @@ return (
     Computer Vision & Biomedical Informatics/Healthcare
     </h2>
     <hr />
-    <div className="flex items-center justify-center space-x-4 py-20">
+    <div className="flex flex-wrap items-center justify-center sm:space-x-4 py-20">
       {
         features.map((item, index) => (
           <Feature key={index} className="w-64 from-pink-300 floating-lg"  data={item}></Feature>
@@ -72,16 +72,16 @@ return (
     COURSES:<br/>
     </h2>
     <hr />
-    <div className="flex items-center justify-center py-20 divide-x-1">
-      <div className="w-1/2 flex justify-center items-center space-x-2">
+    <div className="flex flex-wrap items-center justify-center py-20  sm:divide-x-1">
+      <div className="w-full sm:w-1/2  flex flex-wrap justify-center items-center sm:space-x-2">
       {
         COURSES.map((item, index) => (
           <Feature key={index} className="w-64 bg-gradient-to-b from-teal-500 to-blue-500 floating-lg duration-100"  data={item}></Feature>
         ))
       }
       </div>
-      <div className="w-1/2 flex justify-center px-10">
-     <div className="">
+      <div className="w-full sm:w-1/2 flex justify-center sm:px-10">
+     <div className="py-10">
      <p className="font-mono text-center font-bold text-sm drop-shadow-lg text-black dark:text-white">
       We are committed to sharing our expertise through a series of courses and projects aimed at fostering deep understanding and practical skills:
      </p>
@@ -102,8 +102,8 @@ return (
     ONGOING PROJECT:<br/>
     </h2>
     <hr />
-    <div className="flex items-center justify-center py-20">
-      <div className="grid grid-cols-2 gap-4">
+    <div className="flex flex-wrap items-center justify-center py-20">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {
         PROJECT.map((item, index) => (
           <Feature key={index} className="bg-gradient-to-b from-pink-500 to-blue-500 floating-lg duration-75"  data={item}></Feature>

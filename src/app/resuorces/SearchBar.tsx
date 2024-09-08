@@ -31,10 +31,10 @@ const SearchBar = (props) => {
           </Button>
         </div>
       </div>
-      <ButtonGroup className="flex justify-center ">
+      <ButtonGroup className="hidden sm:flex  justify-center ">
           {
             props.data.filter.map((item, index) => (
-              <Button key={index}
+              <Button className="" key={index}
               startContent={<img className="w-8 h-8 object-cover rounded-xl" src={item.image}/>}>
                 {item.title}
               </Button>
